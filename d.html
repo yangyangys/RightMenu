@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li{margin: 0;padding: 0;}
+        div{width: 100px;height: 250px;margin: 40px auto;}
+        li{list-style: none;width: 100px;height: 30px;font:14px/30px '黑体';text-align: center;border:1px solid #000;margin-top:-1px;display: none;}
+        li:hover{background: #ccc;}
+        li#on,li#on1{background: #666;display: block;}
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="list1">
+            <li id="on">啦啦啦</li>
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+        <ul id="list2">
+            <li id="on1">嘻嘻嘻</li>
+            <li>004</li>
+            <li>005</li>
+            <li>006</li> 
+        </ul> 
+    </div>
+
+    <script>
+        var on=document.getElementById('on');
+        var on1=document.getElementById('on1');
+        var oLi=document.getElementById('list1').getElementsByTagName('li');
+        var oLi1=document.getElementById('list2').getElementsByTagName('li');
+        var bool=true;
+        var bool1=true;
+        on.onclick=function(){
+            if(bool==true){ 
+                for(var i=1;i<oLi.length;i++){
+                    oLi[i].style.display="block";
+                    bool=false;
+            }
+            }else{
+                for(var i=1;i<oLi.length;i++){
+                    oLi[i].style.display="none";
+                    bool=true;
+                }
+            }
+        }
+        on1.onclick=function(){
+            if(bool1==true){
+                for(var i=1;i<oLi1.length;i++){
+                    oLi1[i].style.display="block";
+                    bool1=false;
+                }
+            }else{
+                for(var i=1;i<oLi1.length;i++){
+                    oLi1[i].style.display="none";
+                    bool1=true;
+                }
+            }
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
